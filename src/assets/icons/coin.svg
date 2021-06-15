@@ -1,40 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
-    <title>money</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <filter x="-9.1%" y="-9.1%" width="128.3%" height="128.3%" filterUnits="objectBoundingBox" id="filter-1">
-            <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
-            <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
-        </filter>
-        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="68.6284858%" id="radialGradient-2">
-            <stop stop-color="#FFCF00" offset="0%"></stop>
-            <stop stop-color="#F7AE15" offset="100%"></stop>
-        </radialGradient>
-    </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Catalog-pg1" transform="translate(-609.000000, -731.000000)">
-            <g id="products" transform="translate(132.000000, 622.000000)">
-                <g id="line-1">
-                    <g id="product-card-hover" filter="url(#filter-1)" transform="translate(300.000000, 0.000000)">
-                        <g id="money" transform="translate(71.000000, 100.000000)">
-                            <g transform="translate(108.000000, 11.000000)">
-                                <g>
-                                    <circle id="Oval-Copy-3" fill="url(#radialGradient-2)" cx="13" cy="13" r="13"></circle>
-                                    <path d="M13,3.0952381 C7.54580357,3.0952381 3.0952381,7.54657738 3.0952381,13 C3.0952381,18.4541964 7.54657738,22.9047619 13,22.9047619 C18.4541964,22.9047619 22.9047619,18.4534226 22.9047619,13 C22.9047619,7.54580357 18.4534226,3.0952381 13,3.0952381 Z M13,21.7440476 C8.17850893,21.7440476 4.25595238,17.8214911 4.25595238,13 C4.25595238,8.17850893 8.17850893,4.25595238 13,4.25595238 C17.8214911,4.25595238 21.7440476,8.17850893 21.7440476,13 C21.7440476,17.8214911 17.8214911,21.7440476 13,21.7440476 Z" id="Shape" fill="#F8B013" fill-rule="nonzero"></path>
-                                    <path d="M13,5.2962963 C8.76834769,5.2962963 5.2962963,8.76956614 5.2962963,13 C5.2962963,17.2316523 8.76956614,20.7037037 13,20.7037037 C17.2316523,20.7037037 20.7037037,17.2304339 20.7037037,13 C20.7037037,8.76834769 17.2304339,5.2962963 13,5.2962963 Z M13,19.5245654 C9.40233107,19.5245654 6.47543462,16.5976689 6.47543462,13 C6.47543462,9.40233107 9.40233107,6.47543462 13,6.47543462 C16.5976689,6.47543462 19.5245654,9.40233107 19.5245654,13 C19.5245654,16.5976689 16.5976689,19.5245654 13,19.5245654 Z" id="Shape" fill="#F8B013" fill-rule="nonzero"></path>
-                                </g>
-                            </g>
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="url(#paint0_radial)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.85693 12C2.85693 6.96607 6.96515 2.85714 11.9998 2.85714C17.0337 2.85714 21.1426 6.96536 21.1426 12C21.1426 17.0339 17.0344 21.1429 11.9998 21.1429C6.96586 21.1429 2.85693 17.0346 2.85693 12ZM3.92836 12C3.92836 16.4506 7.54918 20.0714 11.9998 20.0714C16.4504 20.0714 20.0712 16.4506 20.0712 12C20.0712 7.54939 16.4504 3.92857 11.9998 3.92857C7.54918 3.92857 3.92836 7.54939 3.92836 12Z" fill="#F8B013"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.88867 12C4.88867 8.09498 8.09364 4.88889 11.9998 4.88889C15.9048 4.88889 19.1109 8.09386 19.1109 12C19.1109 15.905 15.9059 19.1111 11.9998 19.1111C8.09477 19.1111 4.88867 15.9061 4.88867 12ZM5.97711 12C5.97711 15.3209 8.67886 18.0227 11.9998 18.0227C15.3207 18.0227 18.0225 15.3209 18.0225 12C18.0225 8.67908 15.3207 5.97732 11.9998 5.97732C8.67886 5.97732 5.97711 8.67908 5.97711 12Z" fill="#F8B013"/>
+<defs>
+<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 12) rotate(-90) scale(16.4708)">
+<stop stop-color="#FFCF00"/>
+<stop offset="1" stop-color="#F7AE15"/>
+</radialGradient>
+</defs>
 </svg>
