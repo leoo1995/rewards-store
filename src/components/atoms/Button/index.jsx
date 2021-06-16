@@ -2,19 +2,23 @@ import React from "react"
 import { StyledButtonPrimary, StyledButtonSecondary } from "./styles"
 import PropTypes from "prop-types"
 
-export const Button = ({ label, ...props }) => {
+export const Button = props => {
   if (props.type === "primary")
-    return <StyledButtonPrimary {...props}>{label}</StyledButtonPrimary>
-  return <StyledButtonSecondary {...props}>{label}</StyledButtonSecondary>
+    return (
+      <StyledButtonPrimary {...props}>{props.children}</StyledButtonPrimary>
+    )
+  return (
+    <StyledButtonSecondary {...props}>{props.children}</StyledButtonSecondary>
+  )
 }
 
 Button.propTypes = {
-  label: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   type: PropTypes.string,
   onClick: PropTypes.func
 }
 Button.defaultProps = {
-  label: "Button",
+  children: "Button",
   type: PropTypes.oneOf(["primary", "secondary"]),
   onClick: undefined
 }
