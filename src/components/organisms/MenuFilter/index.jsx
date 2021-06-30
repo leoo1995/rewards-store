@@ -6,13 +6,12 @@ import { Button } from "../../atoms/Button"
 import { ArrowButton } from "../../atoms/ArrowButton"
 import { StyledMenuFilter, StyledNavigation, StyledLine } from "./styles"
 import { GlobalStates } from "../../../context/GlobalStates"
+import { PaginationContext } from "../../../context/PaginationContext"
 export const MenuFilter = () => {
   const { state, setState } = useContext(GlobalStates)
   const { products, user } = state
   const { redeemHistory } = user
-  // const Dates = redeemHistory?.map(redeem =>
-  //   new Date(redeem.createDate).getTime()
-  // )
+  const { next, prev, currentPage, maxPage } = useContext(PaginationContext)
   const sortByMostRecent = () => {
     const redeemHistoryDescendent = redeemHistory?.sort((a, b) => {
       const dateA = new Date(a.createDate)
@@ -42,16 +41,18 @@ export const MenuFilter = () => {
     setState({ ...state, products })
   }
   const [filter, setFilter] = useState({
-    mostRecent: true,
+    mostRecent: false,
     lowestPrice: false,
     highestPrice: false
   })
 
   return (
     <StyledMenuFilter>
-      {/* <Pagination {...{ numberOfProductsSeen, numberOfProducts }} /> */}
       <div>
-        <Pagination numberOfProductsSeen={16} numberOfProducts={32} />
+        <Pagination
+          numberOfProductsSeen={currentPage * 16}
+          numberOfProducts={products.length}
+        />
         <Line vertical size="100%" />{" "}
         <Label size="24px" color="#a3a3a3">
           Sort by:
@@ -97,8 +98,12 @@ export const MenuFilter = () => {
         </Button>
       </div>
       <StyledNavigation>
-        <ArrowButton type="left" />
-        <ArrowButton ype="right" />
+        {currentPage === maxPage ? (
+          <ArrowButton type="left" onClick={prev} />
+        ) : undefined}
+        {currentPage === 1 ? (
+          <ArrowButton type="right" onClick={next} />
+        ) : undefined}
       </StyledNavigation>
       <StyledLine size="100%" horizontal />
     </StyledMenuFilter>

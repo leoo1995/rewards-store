@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { ProductCard } from "../../molecules/ProductCard"
 import styled from "styled-components"
-import { GlobalStates } from "../../../context/GlobalStates"
+import { PaginationContext } from "../../../context/PaginationContext"
 export const StyledProducts = styled.section`
   min-height: 1200px;
   max-width: 1176px;
@@ -20,12 +20,11 @@ export const StyledProducts = styled.section`
 `
 
 export const Products = () => {
-  const { state } = useContext(GlobalStates)
-  const products = state.products
+  const { currentProducts } = useContext(PaginationContext)
 
   return (
     <StyledProducts>
-      {products?.map(product => (
+      {currentProducts()?.map(product => (
         <ProductCard key={product._id} {...product} />
       ))}
     </StyledProducts>

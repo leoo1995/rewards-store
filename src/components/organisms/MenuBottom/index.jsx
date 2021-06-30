@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Pagination } from "../../molecules/Pagination"
 import { ArrowButton } from "../../atoms/ArrowButton"
 import styled from "styled-components"
 import { Line } from "../../atoms/Line"
+import { PaginationContext } from "../../../context/PaginationContext"
+import { GlobalStates } from "../../../context/GlobalStates"
 
 const StyledMenuBottom = styled.div`
   max-width: 1176px;
@@ -35,12 +37,23 @@ const StyledNavigation = styled.div`
   align-self: center;
 `
 export const MenuBottom = () => {
+  const { state } = useContext(GlobalStates)
+  const { products } = state
+  const { next, prev, currentPage, maxPage } = useContext(PaginationContext)
+
   return (
     <StyledMenuBottom>
-      <Pagination numberOfProductsSeen={16} numberOfProducts={32}></Pagination>
+      <Pagination
+        numberOfProductsSeen={currentPage * 16}
+        numberOfProducts={products.length}
+      />
       <StyledNavigation>
-        <ArrowButton type="left" />
-        <ArrowButton ype="right" />
+        {currentPage === maxPage ? (
+          <ArrowButton type="left" onClick={prev} />
+        ) : undefined}
+        {currentPage === 1 ? (
+          <ArrowButton type="right" onClick={next} />
+        ) : undefined}
       </StyledNavigation>
       <StyledLine size="100%" horizontal />
     </StyledMenuBottom>
