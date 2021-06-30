@@ -27,3 +27,13 @@ Coin.args = {
   coin: true,
   size: ""
 }
+export const Success = Template.bind({})
+Success.args = {
+  success: true,
+  size: ""
+}
+export const Reject = Template.bind({})
+Reject.args = {
+  reject: true,
+  size: ""
+}

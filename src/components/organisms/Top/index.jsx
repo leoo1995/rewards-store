@@ -11,6 +11,7 @@ export const StyledTop = styled.div`
   box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
 `
 export const Top = ({ user, points }) => {
   return (

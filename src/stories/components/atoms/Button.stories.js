@@ -4,15 +4,21 @@ export default {
   title: "Components/atoms/Button",
   component: Button
 }
-const Template = args => <Button {...args}>{args.label}</Button>
+const Template = args => <Button {...args}>{args.children}</Button>
 
 export const Primary = Template.bind({})
 Primary.args = {
   type: "primary",
-  label: "Button"
+  children: "Button"
 }
 export const Secondary = Template.bind({})
 Secondary.args = {
   type: "secondary",
-  label: "Button"
+  children: "Button"
+}
+
+export const Success = Template.bind({})
+Success.args = {
+  type: "success",
+  children: "Button"
 }

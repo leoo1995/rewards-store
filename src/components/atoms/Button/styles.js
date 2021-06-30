@@ -27,3 +27,7 @@ export const StyledButtonPrimary = styled(StyledButton)`
   background-color: #0ad4fa;
   color: white;
 `
+export const StyledButtonSuccess = styled(StyledButton)`
+  background-color: lightgreen;
+  color: white;
+`

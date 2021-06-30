@@ -1,6 +1,6 @@
 import React from "react"
 import { Label } from "../../atoms/Label"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 
 const Pagination = props => {
   return (
@@ -12,6 +12,6 @@ const Pagination = props => {
   )
 }
 
-Pagination.propTypes = {}
+// Pagination.propTypes = {}
 
 export { Pagination }

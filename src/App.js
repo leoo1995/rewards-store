@@ -1,27 +1,30 @@
 import { createGlobalStyle } from "styled-components"
-import { Button } from "./components/atoms/Button"
 import { BrowserRouter as Router, Route } from "react-router-dom"
-import { ArrowButton } from "./components/atoms/ArrowButton"
+import { Home } from "./components/pages/Home"
+import { AppProvider } from "./context/GlobalStates"
 const GlobalStyle = createGlobalStyle`
   body{
     margin:0;
     padding:0;
-    font-family:'Source Sans Pro';
+    font-family:'Source Sans Pro',sans-serif;
+  background-color: #f2f2f2;
+
   }
+
 `
 
 function App() {
   return (
-    <Router>
-      <Route>
+    <AppProvider>
+      <Router>
         <GlobalStyle />
         <div className="App">
-          <h1>Hola mundo </h1>
-          <Button arrowLeft>Most Recent</Button>
-          <ArrowButton />
+          <Route path="/" exact>
+            <Home />
+          </Route>
         </div>
-      </Route>
-    </Router>
+      </Router>
+    </AppProvider>
   )
 }
 
