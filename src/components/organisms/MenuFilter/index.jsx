@@ -1,17 +1,20 @@
 import React, { useState, useContext } from "react"
+//components
 import { Pagination } from "../../molecules/Pagination"
 import { Label } from "../../atoms/Label"
 import { Line } from "../../atoms/Line"
 import { Button } from "../../atoms/Button"
 import { ArrowButton } from "../../atoms/ArrowButton"
 import { StyledMenuFilter, StyledNavigation, StyledLine } from "./styles"
+//contexts
 import { GlobalStates } from "../../../context/GlobalStates"
 import { PaginationContext } from "../../../context/PaginationContext"
-export const MenuFilter = () => {
+
+const MenuFilter = () => {
   const { state, setState } = useContext(GlobalStates)
+  const { next, prev, currentPage, maxPage } = useContext(PaginationContext)
   const { products, user } = state
   const { redeemHistory } = user
-  const { next, prev, currentPage, maxPage } = useContext(PaginationContext)
   const sortByMostRecent = () => {
     const redeemHistoryDescendent = redeemHistory?.sort((a, b) => {
       const dateA = new Date(a.createDate)
@@ -24,12 +27,17 @@ export const MenuFilter = () => {
         return index === idsHistory.indexOf(item.productId)
       }
     )
-    const productsBought = redeemHistoryDescendentFiltered.map(
-      item => products.find(product => product._id === item.productId) //no es funcion pura debido a que usa un factor externo
-    )
-    const recentProducts = [...productsBought, ...products].filter(
-      (product, index, self) => index === self.indexOf(product)
-    )
+    const filterProductsById = (productsHistory, productsList) => {
+      return productsHistory.map(productInHistory =>
+        productsList.find(
+          productInList => productInList._id === productInHistory.productId
+        )
+      )
+    }
+    const recentProducts = [
+      ...filterProductsById(redeemHistoryDescendentFiltered, products),
+      ...products
+    ].filter((product, index, self) => index === self.indexOf(product))
     setState({ ...state, products: recentProducts })
   }
   const sortByLowestPrice = () => {
@@ -109,3 +117,4 @@ export const MenuFilter = () => {
     </StyledMenuFilter>
   )
 }
+export { MenuFilter }

@@ -1,3 +1,4 @@
+//libraries
 import React, { useContext } from "react"
 import styled from "styled-components"
 import Loader from "react-loader-spinner"
@@ -7,6 +8,7 @@ import { Button } from "../../atoms/Button"
 import { Icon } from "../../atoms/Icon"
 //context
 import { GlobalStates } from "../../../context/GlobalStates"
+
 const Card = styled.div`
   border-radius: 5px;
   background-color: #f2f2f2;

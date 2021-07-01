@@ -34,11 +34,6 @@ export const ProductCard = ({ img, name, category, cost, ...props }) => {
       {hover && points >= cost ? (
         <StyledProductCardHover
           onClick={() => {
-            // redeemProduct(props._id).then(response => {
-            //   getUser().then(user => {
-            //     setState({ ...state, modalVisible: true, user })
-            //   })
-            // })
             setState({ ...state, modalVisible: true, redeemLoading: true })
             const updatePoints = async () => {
               await redeemProduct(props._id)

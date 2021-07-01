@@ -4,10 +4,8 @@ import styled from "styled-components"
 //components
 import { Top } from "../../organisms/Top"
 import { Header } from "../../atoms/Header"
-import { MenuFilter } from "../../organisms/MenuFilter"
-import { Products } from "../../organisms/Products"
-import { MenuBottom } from "../../organisms/MenuBottom"
 import { Dropdown } from "../../organisms/Dropdown"
+import { RedeemWrapper } from "../../organisms/RedeemWrapper"
 
 const Container = styled.div`
   max-width: 1440px;
@@ -19,17 +17,15 @@ const Container = styled.div`
   margin: auto;
   /* gap: 30px; */
 `
-const Home = () => {
+const History = () => {
   return (
     <Container>
       <Top />
       <Dropdown />
       <Header />
-      <MenuFilter />
-      <Products />
-      <MenuBottom />
+      <RedeemWrapper />
     </Container>
   )
 }
 
-export { Home }
+export { History }
