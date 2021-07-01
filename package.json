@@ -2,7 +2,7 @@
   "name": "rewards-store",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://leoo1995.github.io/rewards-store",
+  "homepage": "https://leoo1995.github.io/rewards-store",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -25,7 +25,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "predeploy": "yarn run build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
