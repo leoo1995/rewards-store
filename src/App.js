@@ -27,7 +27,7 @@ function App() {
         <div className="App">
           <Router>
             <Modal />
-            <Route path="/">
+            <Route path="/" exact>
               <Home />
             </Route>
             <Route path="/history" exact>
