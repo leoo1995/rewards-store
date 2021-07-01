@@ -27,12 +27,14 @@ function App() {
         <div className="App">
           <Router>
             <Modal />
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/history" exact>
-              <History />
-            </Route>
+            <switch>
+              <Route path="/" exact>
+                <Home />
+              </Route>
+              <Route path="/history" exact>
+                <History />
+              </Route>
+            </switch>
           </Router>
         </div>
       </PaginationProvider>
