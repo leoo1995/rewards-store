@@ -23,18 +23,18 @@ function App() {
   return (
     <AppProvider>
       <PaginationProvider>
-        <Router>
-          <GlobalStyle />
-          <div className="App">
+        <GlobalStyle />
+        <div className="App">
+          <Router>
             <Modal />
-            <Route path="/" exact>
+            <Route path="/">
               <Home />
             </Route>
             <Route path="/history" exact>
               <History />
             </Route>
-          </div>
-        </Router>
+          </Router>
+        </div>
       </PaginationProvider>
     </AppProvider>
   )
