@@ -25,7 +25,7 @@ const RedeemWrapper = props => {
           return dateB.getTime() - dateA.getTime()
         })
         .map(item => (
-          <RedeemContainer {...item} />
+          <RedeemContainer {...item} key={item.createDate} />
         ))}
     </Wrapper>
   )

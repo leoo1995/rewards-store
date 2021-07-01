@@ -1,6 +1,11 @@
 //libraries
 import { createGlobalStyle } from "styled-components"
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom"
 //components
 import { Home } from "./components/pages/Home"
 import { AppProvider } from "./context/GlobalStates"
@@ -27,14 +32,17 @@ function App() {
         <div className="App">
           <Router>
             <Modal />
-            <switch>
+            <Switch>
+              <Route path="/rewards-store">
+                <Redirect to="/" />
+              </Route>
               <Route path="/" exact>
                 <Home />
               </Route>
               <Route path="/history" exact>
                 <History />
               </Route>
-            </switch>
+            </Switch>
           </Router>
         </div>
       </PaginationProvider>
