@@ -17,7 +17,6 @@ const Container = styled.div`
   background-color: #f2f2f2;
   position: relative;
   margin: auto;
-  /* gap: 30px; */
 `
 const Home = () => {
   return (

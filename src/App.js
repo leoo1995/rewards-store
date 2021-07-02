@@ -1,11 +1,6 @@
 //libraries
 import { createGlobalStyle } from "styled-components"
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect
-} from "react-router-dom"
+import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom"
 //components
 import { Home } from "./components/pages/Home"
 import { AppProvider } from "./context/GlobalStates"
@@ -33,9 +28,6 @@ function App() {
           <Router basename="/rewards-store">
             <Modal />
             <Switch>
-              {/* <Route path="/rewards-store">
-                <Redirect to="/" />
-              </Route> */}
               <Route path="/" exact>
                 <Home />
               </Route>
