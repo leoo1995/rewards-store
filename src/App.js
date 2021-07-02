@@ -30,12 +30,12 @@ function App() {
       <PaginationProvider>
         <GlobalStyle />
         <div className="App">
-          <Router>
+          <Router basename="/rewards-store">
             <Modal />
             <Switch>
-              <Route path="/rewards-store">
+              {/* <Route path="/rewards-store">
                 <Redirect to="/" />
-              </Route>
+              </Route> */}
               <Route path="/" exact>
                 <Home />
               </Route>
