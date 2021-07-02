@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-import { Link } from "react-router-dom"
 //componenst
 import { Icon } from "../../atoms/Icon"
 import { Label } from "../../atoms/Label"
@@ -14,11 +13,10 @@ export const Profile = props => {
 
   return (
     <StyledProfile>
-      <Link to="/history">
-        <Label size="24px" color={props.color || "#616161"}>
-          {user.name}
-        </Label>
-      </Link>
+      <Label size="24px" color={props.color || "#616161"}>
+        {user.name}
+      </Label>
+
       <PointsAvailable {...props}>
         <Label size="24px" color={props.color || "#616161"}>
           {user.points}

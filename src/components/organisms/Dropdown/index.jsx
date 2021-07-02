@@ -6,8 +6,6 @@ import { GlobalStates } from "../../../context/GlobalStates"
 import Loader from "react-loader-spinner"
 import styled from "styled-components"
 const StyledDropdown = styled.form`
-  display: ${({ dropdownVisible }) => (dropdownVisible ? `flex` : `none`)};
-
   flex-direction: column;
   align-items: center;
   gap: 10px;
@@ -52,9 +50,9 @@ const Dropdown = () => {
     updatePoints()
   }
   const [selectedPoints, setSelectedPoints] = useState(1000)
-  const [dropdownVisible, setDropdownVisible] = useState(true)
+  // const [dropdownVisible, setDropdownVisible] = useState(true)
   return (
-    <StyledDropdown {...{ dropdownVisible }} onSubmit={handleSubmit}>
+    <StyledDropdown onSubmit={handleSubmit}>
       <input
         type="radio"
         id="1000"
