@@ -1,6 +1,6 @@
 //libraries
 import { createGlobalStyle } from "styled-components"
-import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom"
+import { HashRouter as Router, Route, Switch } from "react-router-dom"
 //components
 import { Home } from "./components/pages/Home"
 import { AppProvider } from "./context/GlobalStates"
@@ -16,7 +16,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: #f2f2f2;
 
   }
-
 `
 
 function App() {
@@ -25,7 +24,7 @@ function App() {
       <PaginationProvider>
         <GlobalStyle />
         <div className="App">
-          <Router basename="/rewards-store">
+          <Router>
             <Modal />
             <Switch>
               <Route path="/" exact>
